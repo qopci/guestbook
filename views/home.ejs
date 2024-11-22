@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Contact Form</title>
+    <link rel="icon" type="image/png" href="/images/contact-icon.png?v=1"> <!-- Favicon -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div id="form-container">
+        <h1>Contact Form</h1>
+        <form id="contact-form" action="/confirmation" method="POST">
+                <div class="form-row">
+                    <div>
+                        <!-- First Name -->
+                        <label for="fname">First Name
+                        <span id="err-fname" class="err">Required!</span></label> 
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div>
+                        <!-- Last Name -->
+                        <label for="lname">Last Name
+                        <span id="err-lname" class="err">Required!</span></label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div>
+                        <!-- Job Title -->
+                        <label for="jobtitle">Job Title</label>
+                        <input type="text" id="jobtitle" name="jobtitle">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <!-- Company -->
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div>
+                        <!-- LinkedIn URL -->
+                        <label for="linkedinurl">LinkedIn URL
+                        <span id="err-linkedinurl" class="err">must start with https://www.linkedin.com/in/</span></label>
+                        <input type="url" id="linkedinurl" name="linkedinurl">
+                    </div>
+                    <div>
+                        <!-- Email Address -->
+                        <label for="email">Email Address
+                        <span id="err-email" class="err">Required!</span></label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+                <div class="form-row" id="met-row">
+                    <div>
+                        <!-- How did we meet DROPDOWN Menu -->
+                        <label for="meeting">How did we meet?
+                        <span id="err-meeting" class="err">Required!</span></label>
+                        <select id="meeting" name="meeting">
+                            <option value="">Please select</option>
+                            <option value="meetup">Meetup</option>
+                            <option value="job fair">Job Fair</option>
+                            <option value="school">School</option>
+                            <option value="dont remember">Don't Remember</option>
+                            <option value="family friends">Family Friends</option>
+                            <option value="other met">Other</option>
+                        </select>
+                    </div>
+                    <div id="other-section">
+                        <!-- Other -->
+                        <label for="other">Other (please specify)</label>
+                        <input type="text" id="other" name="other">
+                    </div>  
+                </div>
+                <div class="message-row">
+                    <div>
+                        <!-- Message Section -->
+                        <label for="text-message">Message</label>
+                        <textarea id="text-message" rows="5" name="message"></textarea>
+                    </div> 
+                </div>
+                <div class="message-row">
+                    <div>
+                        <!-- Please add me to your mailing list -->
+                        <label><input type="checkbox" value="email" name="mailinglist">Please add me to your mailing list</label>
+                    </div> 
+                </div>
+                <div id="email-row">
+                    <div>
+                        <!-- Email Format -->
+                        <p class="inline-label">Choose an email format:</p>
+                        <label class="inline-label"><input type="radio" name="emailformat" value="HTML">HTML</label>
+                        <label class="inline-label"><input type="radio" name="emailformat" value="Text">Text</label>
+                    </div> 
+                </div>
+                <div class="message-row">
+                    <div>
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-button" name="button" value="submit">Submit</button>
+                    </div> 
+                </div>
+        </form>
+    </div>
+</body>
+</html>
